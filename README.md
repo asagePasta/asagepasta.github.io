@@ -1,2 +1,2 @@
-# asagepasta.github.io
-AsagePasta developer portfolio
+# Hayakawa Dev
+Developer portfolio site -- https://asagepasta.github.io/

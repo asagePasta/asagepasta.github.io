@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AsagePasta - Developer</title>
+  <title>Hayakawa Dev</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, "Hiragino Sans", "Meiryo", sans-serif;
@@ -13,23 +13,48 @@
     header p  { margin-top: 10px; font-size: 1.1em; color: #ccc; }
     main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
     h2 { color: #2a4a3a; border-bottom: 2px solid #d4af74; padding-bottom: 8px; margin: 40px 0 20px; }
+    .about { background: #fff; border-radius: 12px; padding: 24px;
+             box-shadow: 0 2px 8px rgba(0,0,0,0.08); line-height: 1.8; color: #555; }
+    .about p + p { margin-top: 12px; }
     .app-card { background: #fff; border-radius: 12px; padding: 24px;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 16px; }
     .app-card h3 { color: #2a4a3a; font-size: 1.3em; }
     .app-card p  { margin-top: 8px; color: #555; line-height: 1.7; }
     .app-card a  { display: inline-block; margin-top: 12px; color: #2a4a3a;
                    text-decoration: none; font-weight: bold; border-bottom: 1px solid #d4af74; }
-    .links { text-align: center; margin: 40px 0; }
-    .links a { margin: 0 16px; color: #2a4a3a; text-decoration: none; font-size: 1.1em; }
+    .contact-form { background: #fff; border-radius: 12px; padding: 24px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%; padding: 10px 12px; margin-top: 8px; margin-bottom: 16px;
+      border: 1px solid #ddd; border-radius: 6px; font-size: 1em;
+      font-family: inherit; background: #fafafa;
+    }
+    .contact-form textarea { height: 140px; resize: vertical; }
+    .contact-form label { color: #555; font-size: 0.95em; }
+    .contact-form button {
+      background: #2a4a3a; color: #fff; border: none; padding: 12px 28px;
+      border-radius: 6px; font-size: 1em; cursor: pointer;
+    }
+    .contact-form button:hover { background: #1e3629; }
+    .github-link { text-align: center; margin-top: 20px; }
+    .github-link a { color: #2a4a3a; text-decoration: none; font-size: 1em;
+                     border-bottom: 1px solid #d4af74; }
     footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; }
   </style>
 </head>
 <body>
   <header>
-    <h1>AsagePasta</h1>
+    <h1>Hayakawa Dev</h1>
     <p>Android app developer</p>
   </header>
   <main>
+    <h2>About</h2>
+    <div class="about">
+      <p>個人でAndroidアプリを開発しています。</p>
+      <p>日常の小さな不便を解消するシンプルなツールを作ることが好きです。アカウント不要・オフライン動作を基本として、ユーザーのデータが端末の外に出ないアプリ設計を心がけています。</p>
+    </div>
+
     <h2>Apps</h2>
     <div class="app-card">
       <h3>TsunStack - 積読・読書ログ管理</h3>
@@ -38,12 +63,26 @@
     </div>
 
     <h2>Contact</h2>
-    <div class="links">
-      <a href="https://github.com/asagePasta">GitHub</a>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+        <label>お名前
+          <input type="text" name="name" placeholder="山田 太郎" required>
+        </label>
+        <label>メールアドレス
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </label>
+        <label>メッセージ
+          <textarea name="message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+        </label>
+        <button type="submit">送信する</button>
+      </form>
+    </div>
+    <div class="github-link">
+      <a href="https://github.com/asagePasta">GitHub &rarr;</a>
     </div>
   </main>
   <footer>
-    <p>&copy; 2026 AsagePasta</p>
+    <p>&copy; 2026 Hayakawa Dev</p>
   </footer>
 </body>
 </html>
